@@ -1,0 +1,134 @@
+.container {
+    height: 934px;
+    width: 100%;
+    background-color: #1B1D44;
+    position: relative;
+    overflow: hidden;
+}
+
+.particle,
+.particle.animationOne,
+.particle.animationTwo,
+.particle.animationThree,
+.particle.animationFour,
+.particle.animationFive {
+    opacity: 0;
+    background-color: #b1f06d;
+    position: absolute;
+    animation-timing-function: ease;
+    transition: opacity .3s ease, top 20s ease, left 20s ease, right 20s ease, bottom 20s ease, height .2s ease, width .2s ease;
+}
+
+.particle.animationOne {
+    animation: animationOne 2s 1;
+}
+
+.particle.animationTwo {
+    animation: animationTwo 2s 1;
+}
+
+.particle.animationThree {
+    animation: animationThree 2s 1;
+}
+
+.particle.animationFour {
+    animation: animationFour 2s 1;
+}
+.particle.animationFive {
+    animation: animationFive 2s 1;
+}
+
+
+/*  
+Write three-four different animations
+Set three-four different sizes
+
+
+*/
+
+@keyframes animationOne {
+    0% {
+        opacity: 0;
+        transform: scale(1, 1);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5, 1.5);
+    }
+}
+
+@keyframes animationTwo {
+    0% {
+        opacity: 0;
+        transform: scale(1.1, 1.1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(2, 2);
+    }
+    75% {
+        transform: scale(1.0, 1.0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(.1, .1);
+    }
+}
+
+
+@keyframes animationThree {
+    0% {
+        opacity: 0;
+        transform: translateX(50px) translateY(200px) scale(.5, .5);
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(150px) translateY(0px) scale(.9, .9);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(200px) translateY(0px) scale(.5, .5);
+    }
+}
+
+
+@keyframes animationFour {
+    0% {
+        opacity: 0;
+        transform: scaleX(0) translate(0px,0px);
+    }
+    25% {
+    	transform: scaleX(1.0) translate(0px,0px);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleX(0) translate(0px,0px);
+    }
+    75% {
+		transform: scaleX(1) translate(0px,0px);
+    }
+    100% {
+        opacity: 0;
+        transform: scaleX(0) translate(120px,120px);
+    }
+}
+
+
+@keyframes animationFive {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
